@@ -219,7 +219,9 @@ namespace ChatService
 
             string opponentRoutingKey = routingKey + "_" + playerToReceive;
 
-            var body = Encoding.UTF8.GetBytes(msgToSent);
+            string newMsg = playerWhoSent + ": " + msgToSent;
+
+            var body = Encoding.UTF8.GetBytes(newMsg);
 
             playerPublishChannel.BasicPublish(exchange: playerToReceive,
                 routingKey: opponentRoutingKey,
