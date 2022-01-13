@@ -19,7 +19,7 @@ namespace ChatService
             "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T",
             "U", "V", "W", "X", "Y", "Z" };
 
-        static List<string[]> upperAndLowerCollections;
+        static List<string[]>? upperAndLowerCollections;
 
         static HashSet<string> routingKeyCombinations = new();
 
